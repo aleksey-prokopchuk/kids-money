@@ -1,0 +1,9 @@
+.contact {
+  display: flex;
+  &__item:not(:last-child) {
+    margin-right: 75px;
+  }
+  &__link {
+    color: var(--white-color);
+  }
+}

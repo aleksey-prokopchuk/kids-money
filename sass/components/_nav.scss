@@ -1,0 +1,12 @@
+.nav {
+  margin-right: 127px;
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    padding-right: 25px;
+  }
+  &__link {
+    color: var(--accent-color);
+  }
+}
