@@ -155,6 +155,10 @@ body {
 .programs {
   padding-top: 100px;
   padding-bottom: 100px;
+  background-image: url(../images/programs/programs-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .programs__list {
   display: flex;
@@ -177,9 +181,6 @@ body {
 }
 .methods__container {
   padding: 100px 160px;
-}
-.methods__subtitle {
-  margin-bottom: 60px;
 }
 .methods__list {
   display: grid;
@@ -232,10 +233,16 @@ body {
 }
 
 .skills {
-  padding: 100px 165px;
+  height: 1113px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url(../images/skills/skills-bg.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-.skills__subtitle {
-  margin-bottom: 60px;
+.skills__container {
+  position: relative;
 }
 .skills__item {
   display: flex;
@@ -258,6 +265,44 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.skills__item:hover, .skills__item:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.skills__item:nth-child(1) {
+  position: absolute;
+  top: 163px;
+  left: 315px;
+}
+.skills__item:nth-child(2) {
+  position: absolute;
+  top: 163px;
+  left: 615px;
+}
+.skills__item:nth-child(3) {
+  position: absolute;
+  top: 403px;
+  left: 165px;
+}
+.skills__item:nth-child(4) {
+  position: absolute;
+  top: 403px;
+  left: 465px;
+}
+.skills__item:nth-child(5) {
+  position: absolute;
+  top: 403px;
+  left: 765px;
+}
+.skills__item:nth-child(6) {
+  position: absolute;
+  top: 643px;
+  left: 315px;
+}
+.skills__item:nth-child(7) {
+  position: absolute;
+  top: 643px;
+  left: 615px;
+}
 .skills__description {
   font-weight: 700;
   font-size: 25px;
@@ -269,6 +314,12 @@ body {
   color: var(--accent-color);
 }
 
+.teacher {
+  background-image: url(../images/teacher/teacher-bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .teacher__list {
   padding: 100px 80px;
   border-radius: 40px;
@@ -292,6 +343,10 @@ body {
 .locations {
   padding-top: 100px;
   padding-bottom: 100px;
+  background-image: url(../images/locations/locations-bg.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .locations__wrapper {
   display: flex;
@@ -314,12 +369,11 @@ body {
   line-height: 1.16;
 }
 .locations__map {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 570px;
-  height: 736px;
+  width: 572px;
+  height: 738px;
+  border: 1px solid var(--grey-color);
   background-color: rgb(187, 187, 187);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .footer {

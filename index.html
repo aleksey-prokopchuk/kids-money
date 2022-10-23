@@ -27,7 +27,7 @@
     <!-- header -->
     <header class="header">
       <div class="container header__container">
-        <a href="#">
+        <a href="/index.html">
           <img
             class="logo header__logo"
             src="./images/logo/logo.svg"
@@ -37,19 +37,19 @@
         <nav class="nav">
           <ul class="nav__list list-no-marker">
             <li class="nav__item">
-              <a class="nav__link link-no-decor" href="#">Програми</a>
+              <a class="nav__link link-no-decor" href="#programs">Програми</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link link-no-decor" href="#">Навички</a>
+              <a class="nav__link link-no-decor" href="#skills">Навички</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link link-no-decor" href="#">Викладач</a>
+              <a class="nav__link link-no-decor" href="#teacher">Викладач</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link link-no-decor" href="#">Локації</a>
+              <a class="nav__link link-no-decor" href="#locations">Локації</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link link-no-decor" href="#">Контакти</a>
+              <a class="nav__link link-no-decor" href="#contacts">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -92,7 +92,7 @@
       <!-- programs -->
       <section class="programs">
         <div class="container programs__container">
-          <h2 class="title programs__title">Програми</h2>
+          <h2 id="programs" class="title programs__title">Програми</h2>
           <ul class="programs__list list-no-marker">
             <li class="programs__item">
               <div class="programs__item-wrapper">
@@ -132,7 +132,7 @@
       <!-- methods -->
       <section class="methods">
         <div class="container methods__container">
-          <h2 class="subtitle methods__subtitle">Методи навчання</h2>
+          <h2 id="methods" class="title methods__title">Методи навчання</h2>
           <ul class="methods__list list-no-marker">
             <li class="methods__item methods__item-method">
               <h3 class="methods__sub-subtitle">Метод проектів</h3>
@@ -168,51 +168,52 @@
 
       <!-- skills -->
       <section class="skills">
-        <div class="container skills__container"></div>
-        <h2 class="skills__subtitle subtitle">Навички</h2>
-        <ul class="skills__list list-no-marker">
-          <li class="skills__item skills__item-accent">
-            <p class="skills__description skills__description-accent">
-              Робота в команді
-            </p>
-          </li>
-          <li class="skills__item skills__item-grey">
-            <p class="skills__description skills__description-grey">
-              Комунікація
-            </p>
-          </li>
-          <li class="skills__item skills__item-accent">
-            <p class="skills__description skills__description-accent">
-              Генерація ідей
-            </p>
-          </li>
-          <li class="skills__item skills__item-grey">
-            <p class="skills__description skills__description-grey">
-              Постановка цілі
-            </p>
-          </li>
-          <li class="skills__item skills__item-accent">
-            <p class="skills__description skills__description-accent">
-              Планування
-            </p>
-          </li>
-          <li class="skills__item skills__item-accent">
-            <p class="skills__description skills__description-accent">
-              Аналіз та робота над помилками
-            </p>
-          </li>
-          <li class="skills__item skills__item-grey">
-            <p class="skills__description skills__description-grey">
-              Креативність
-            </p>
-          </li>
-        </ul>
+        <div class="container skills__container">
+          <h2 id="skills" class="skills__title title">Навички</h2>
+          <ul class="skills__list list-no-marker">
+            <li class="skills__item skills__item-accent">
+              <p class="skills__description skills__description-accent">
+                Робота в команді
+              </p>
+            </li>
+            <li class="skills__item skills__item-grey">
+              <p class="skills__description skills__description-grey">
+                Комунікація
+              </p>
+            </li>
+            <li class="skills__item skills__item-accent">
+              <p class="skills__description skills__description-accent">
+                Генерація ідей
+              </p>
+            </li>
+            <li class="skills__item skills__item-grey">
+              <p class="skills__description skills__description-grey">
+                Постановка цілі
+              </p>
+            </li>
+            <li class="skills__item skills__item-accent">
+              <p class="skills__description skills__description-accent">
+                Планування
+              </p>
+            </li>
+            <li class="skills__item skills__item-accent">
+              <p class="skills__description skills__description-accent">
+                Аналіз та робота над помилками
+              </p>
+            </li>
+            <li class="skills__item skills__item-grey">
+              <p class="skills__description skills__description-grey">
+                Креативність
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- teacher -->
-      <section class="teacher" id="teacher">
+      <section class="teacher">
         <div class="container teacher__container">
-          <h2 class="teacher__title title">Викладач</h2>
+          <h2 id="teacher" class="teacher__title title">Викладач</h2>
           <ul class="teacher__list">
             <li class="teacher__item">
               <p class="teacher__description">Діючий підприємець</p>
@@ -240,13 +241,23 @@
       <!-- locations -->
       <section class="locations">
         <div class="container locations__container">
-          <h2 class="locations__title title">Локації</h2>
+          <h2 id="locations" class="locations__title title">Локації</h2>
           <div class="locations__wrapper">
             <p class="locations__description">
               <span class="locations__select"> М. Лівобережна</span>
               <span class="locations__select"> Каховська 62а (секція 5)</span>
             </p>
-            <div class="locations__map">Карта</div>
+            <div class="locations__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.7975080312544!2d30.58862971604846!3d50.4634952943056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfde6b8c6a85%3A0x4218150796ba3a4e!2z0LLRg9C70LjRhtGPINCa0LDRhdC-0LLRgdGM0LrQsCwgNjLQsCwg0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1suk!2sua!4v1666546876974!5m2!1suk!2sua"
+                width="570"
+                height="736"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -263,17 +274,28 @@
           />
           <ul class="footer__list list-no-marker">
             <li class="footer__item footer__item-phone">
-              <a class="footer__link link-no-decor" href=""
+              <a
+                id="contacts"
+                class="footer__link link-no-decor"
+                href="tel:+380932818181"
                 >+38 (095) 281 81 81</a
               >
             </li>
             <li class="footer__item footer__item-mail">
-              <a class="footer__link link-no-decor" href=""
+              <a
+                class="footer__link link-no-decor"
+                href="mailto:kids8money@gmail.com"
                 >kids8money@gmail.com
               </a>
             </li>
             <li class="footer__item footer__item-social">
-              <a class="footer__link link-no-decor" href="">@kids8money </a>
+              <a
+                class="footer__link link-no-decor"
+                href="https://www.instagram.com/viacheslav_zrazhevsky/?igshid=YmMyMTA2M2Y%3D"
+                target="_blank"
+                rel="noreferrer noopener"
+                >@kids8money</a
+              >
             </li>
           </ul>
         </div>

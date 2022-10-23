@@ -1,8 +1,12 @@
 .programs {
   padding-top: 100px;
   padding-bottom: 100px;
-  //   &__container {
-  //   }
+
+  background-image: url(../images/programs/programs-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
   &__list {
     display: flex;
     gap: 30px;
