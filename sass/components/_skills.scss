@@ -1,0 +1,42 @@
+.skills {
+  padding: 100px 165px;
+  &__container {
+  }
+  &__subtitle {
+    margin-bottom: 60px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 270px;
+    height: 270px;
+
+    padding-left: 50px;
+    padding-right: 50px;
+    &-accent {
+      background-image: url(../images/skills/hexagon-accent.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-grey {
+      background-image: url(../images/skills/hexagon.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &__description {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+
+    color: var(--grey-color);
+    &-grey {
+      color: var(--accent-color);
+    }
+  }
+}

@@ -1,7 +1,8 @@
 .methods {
+  background-color: var(--grey-color);
+
   &__container {
     padding: 100px 160px;
-    background-color: var(--grey-color);
   }
   &__subtitle {
     margin-bottom: 60px;
