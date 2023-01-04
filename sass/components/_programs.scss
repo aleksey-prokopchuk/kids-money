@@ -1,26 +1,186 @@
 .programs {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  @include mq(mobile-only) {
+    // height: 932px;
+  }
 
-  background-image: url(../images/programs/programs-bg.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  padding-bottom: 60px;
+
+  // background-size: cover;
+
+  // &__container {
+  // outline: 1px solid tomato;
+  // }
+  &__title {
+    color: var(--grey-color);
+  }
 
   &__list {
-    display: flex;
-    gap: 30px;
+    @include mq(desktop) {
+      display: flex;
+      gap: 30px;
+    }
     // width: calc(50%-30px);
   }
-  &__item {
-    width: 570px;
 
-    padding: 60px 38px;
+  &__item {
+    padding: 40px 14px 40px 15px;
+
+    @include mq(mobile-only) {
+      // height: 407px;
+    }
+
+    @include mq(tablet-only) {
+      // height: 420px;
+
+      padding: 49px 44px;
+    }
+    @include mq(desktop) {
+      width: 570px;
+      // height: 630px;
+
+      padding: 77px 38px;
+    }
+
+    background-repeat: no-repeat;
+    background-position: top;
 
     background-color: var(--grey-color);
   }
+
+  &__item:nth-child(1) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/programs/programs-fin-bg_sm.jpg);
+    background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+      -webkit-image-set(url(../images/programs/programs-fin-bg_sm.webp) 1x);
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/programs/programs-fin-bg_sm.jpg);
+      background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+        -webkit-image-set(url(../images/programs/programs-fin-bg_sm@2x.webp) 2x);
+    }
+    @include mq(tablet) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/programs/programs-fin-bg_md.jpg);
+      background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+        -webkit-image-set(url(../images/programs/programs-fin-bg_md.webp) 1x);
+      @include mq(retina) {
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url(../images/programs/programs-fin-bg_md.jpg);
+        background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+          -webkit-image-set(url(../images/programs/programs-fin-bg_md@2x.webp)
+                2x);
+      }
+    }
+    @include mq(desktop) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/programs/programs-fin-bg_lg.jpg);
+      background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+        -webkit-image-set(url(../images/programs/programs-fin-bg_lg.webp) 1x);
+      @include mq(retina) {
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url(../images/programs/programs-fin-bg_lg.jpg);
+        background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+          -webkit-image-set(url(../images/programs/programs-fin-bg_lg@2x.webp)
+                2x);
+      }
+    }
+  }
+
+  &__item:nth-child(2) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/programs/programs-found-bg_sm.jpg);
+    background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+      -webkit-image-set(url(../images/programs/programs-found-bg_sm.webp) 1x);
+    @include mq(retina) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/programs/programs-found-bg_sm.jpg);
+      background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+        -webkit-image-set(url(../images/programs/programs-found-bg_sm@2x.webp)
+              2x);
+    }
+    @include mq(tablet) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/programs/programs-found-bg_md.jpg);
+      background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+        -webkit-image-set(url(../images/programs/programs-found-bg_md.webp) 1x);
+      @include mq(retina) {
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url(../images/programs/programs-found-bg_md.jpg);
+        background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+          -webkit-image-set(url(../images/programs/programs-found-bg_md@2x.webp)
+                2x);
+      }
+    }
+    @include mq(desktop) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../images/programs/programs-found-bg_lg.jpg);
+      background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+        -webkit-image-set(url(../images/programs/programs-found-bg_lg.webp) 1x);
+      @include mq(retina) {
+        background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url(../images/programs/programs-found-bg_lg.jpg);
+        background-image: linear-gradient(#2f2f2fe5, #2f2f2fe5),
+          -webkit-image-set(url(../images/programs/programs-found-bg_lg@2x.webp)
+                2x);
+      }
+    }
+  }
+
+  &__item:not(:last-child) {
+    @include mq(mobile-only) {
+      margin-bottom: 10px;
+    }
+
+    @include mq(tablet-only) {
+      margin-bottom: 20px;
+    }
+  }
   &__subtitle {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+
+    @include mq(tablet) {
+      margin-bottom: 30px;
+    }
+
+    @include mq(desktop) {
+      margin-bottom: 50px;
+    }
   }
 
   &__description:not(:last-child) {

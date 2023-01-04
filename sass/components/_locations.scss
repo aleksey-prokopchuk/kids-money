@@ -1,44 +1,81 @@
 .locations {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  @include mq(tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include mq(desktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
-  background-image: url(../images/locations/locations-bg.svg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  // background-image: url(../images/locations/locations-bg.svg);
+  // background-position: center;
+  // background-size: contain;
+  // background-repeat: no-repeat;
 
   &__container {
+    // outline: 1px solid tomato;
+  }
+  &__title {
+    color: var(--grey-color);
   }
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
+    @include mq(desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
   &__description {
     display: flex;
     flex-direction: column;
-    width: 470px;
-    height: 160px;
-    padding: 44px 52px;
+
+    margin-bottom: 30px;
+    padding: 40px 39px;
     border: 2px solid var(--grey-color);
     border-radius: 20px;
 
     color: var(--grey-color);
-  }
 
+    @include mq(tablet) {
+      margin-bottom: 40px;
+      padding: 44px 52px;
+    }
+    @include mq(desktop) {
+      width: 470px;
+      height: 160px;
+    }
+  }
+  &__select {
+    text-align: left;
+  }
   &__select:not(:last-child) {
     margin-bottom: 15px;
 
     font-weight: 600;
-    font-size: 25px;
-    line-height: 1.16;
+    font-size: 20px;
+    line-height: 1.182;
+    @include mq(tablet) {
+      font-size: 25px;
+      line-height: 1.16;
+    }
   }
 
   &__map {
     // display: flex;
     // align-items: center;
     // justify-content: center;
-    width: 572px;
-    height: 738px;
+    width: 394px;
+    height: 504px;
+    @include mq(tablet) {
+      width: 737px;
+      height: 908px;
+    }
+    @include mq(desktop) {
+      width: 572px;
+      height: 738px;
+    }
     border: 1px solid var(--grey-color);
     background-color: rgb(187, 187, 187);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),

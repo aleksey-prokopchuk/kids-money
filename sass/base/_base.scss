@@ -4,31 +4,63 @@ body {
   font-family: var(--main-font);
 
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.15;
+  font-size: 18px;
+  line-height: 1.167;
+  text-align: center;
   letter-spacing: 0.03em;
 
   color: var(--white-color);
-  // background-color: var(--grey-color);
+
+  @include mq(tablet) {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 
 .title {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+
   font-family: var(--secondary-font);
   font-weight: 700;
-  font-size: 70px;
-  line-height: 1.357;
+  font-size: 35px;
+  line-height: 1.371;
   text-align: center;
 
   color: var(--accent-color);
+
+  @include mq(tablet) {
+    margin-bottom: 40px;
+
+    font-size: 50px;
+    line-height: 1.36;
+
+    margin-bottom: 40px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 60px;
+
+    font-size: 70px;
+    line-height: 1.357;
+
+    margin-bottom: 60px;
+  }
 }
 
 .subtitle {
   font-family: var(--secondary-font);
   font-weight: 500;
-  font-size: 40px;
-  line-height: 1.35;
+  font-size: 28px;
+  line-height: 1.357;
   text-align: center;
 
   color: var(--accent-color);
+
+  @include mq(tablet) {
+    font-size: 40px;
+    line-height: 1.35;
+  }
+  @include mq(desktop) {
+    font-size: 40px;
+    line-height: 1.35;
+  }
 }

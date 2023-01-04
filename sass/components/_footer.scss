@@ -1,52 +1,131 @@
 .footer {
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 30px;
+  @include mq(tablet) {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
   background-color: var(--grey-color);
+  &__container {
+    // outline: 1px solid tomato;
+  }
   &__wrapper {
     display: flex;
+    margin-bottom: 34px;
+    @include mq(mobile-only) {
+      justify-content: space-between;
 
-    margin-bottom: 50px;
+      margin-bottom: 38px;
+    }
+    @include mq(tablet-only) {
+      justify-content: space-between;
+
+      margin-bottom: 38px;
+    }
   }
   &__logo {
+    width: 100px;
+    height: 100px;
     margin-right: 24px;
+    @include mq(tablet) {
+      width: 132px;
+      height: 132px;
+    }
   }
   &__list {
-    display: flex;
-    align-items: center;
+    @include mq(desktop) {
+      display: flex;
+      align-items: center;
+    }
   }
   &__item {
-    width: 278px;
-    text-align: center;
-    &-phone::before,
-    &-mail::before,
-    &-social::before {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 86px;
-      //   margin-bottom: 30px;
-      background-position: top;
-      background-repeat: no-repeat;
+    @include mq(desktop) {
+      width: 278px;
     }
-    &-phone::before {
-      background-image: url(../images/footer/icon-phone.svg);
+
+    @include mq(mobile-only) {
+      position: relative;
+      padding-right: 52px;
+
+      text-align: right;
     }
-    &-mail::before {
-      background-image: url(../images/footer/icon-mail.svg);
+    @include mq(tablet-only) {
+      position: relative;
+      padding-right: 60px;
+
+      text-align: right;
     }
-    &-social::before {
-      background-image: url(../images/footer/icon-social.svg);
-    }
+
+    // text-align: center;
+    // &-phone::before,
+    // &-mail::before,
+    // &-social::before {
+    //   content: "";
+    //   display: block;
+    //   width: 100%;
+    //   height: 86px;
+    //   //   margin-bottom: 30px;
+    //   background-position: top;
+    //   background-repeat: no-repeat;
+    // }
+
+    // &-phone::before {
+    //   background-image: url(../images/footer/icon-phone.svg);
+    // }
+    // &-mail::before {
+    //   background-image: url(../images/footer/icon-mail.svg);
+    // }
+    // &-social::before {
+    //   background-image: url(../images/footer/icon-social.svg);
+    // }
   }
   &__item:not(:last-child) {
-    margin-right: 40px;
+    margin-bottom: 20px;
+    @include mq(tablet) {
+      margin-bottom: 27px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 0;
+
+      margin-right: 40px;
+    }
   }
   &__link {
+    @include mq(desktop) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    align-items: center;
     font-weight: 600;
     font-size: 22px;
     line-height: 1.182;
 
+    @include mq(mobile-only) {
+      font-size: 18px;
+      line-height: 1.167;
+    }
+
     color: var(--white-color);
+
+    &-icon {
+      position: absolute;
+      top: -7px;
+      right: 0;
+
+      width: 34px;
+      height: 34px;
+      @include mq(tablet) {
+        width: 42px;
+        height: 42px;
+      }
+      @include mq(desktop) {
+        position: static;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 26px;
+      }
+      fill: var(--accent-color);
+    }
   }
   &__copyright {
     font-weight: 400;

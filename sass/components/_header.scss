@@ -2,14 +2,38 @@
   &__container {
     display: flex;
     align-items: center;
+    // outline: 1px solid tomato;
+
+    @include mq(mobile-only) {
+      justify-content: space-between;
+    }
   }
   padding-top: 14px;
   padding-bottom: 14px;
   background-color: var(--grey-color);
 
+  @mixin tablet {
+  }
+
+  &__link {
+    margin-right: 46px;
+    @include mq(desktop) {
+      margin-right: 109px;
+    }
+  }
+
   &__logo {
-    width: 91px;
-    height: 91px;
-    margin-right: 109px;
+    width: 52px;
+    height: 52px;
+
+    @include mq(tablet) {
+      width: 65px;
+      height: 65px;
+    }
+
+    @include mq(desktop) {
+      width: 91px;
+      height: 91px;
+    }
   }
 }

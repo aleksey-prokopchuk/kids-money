@@ -1,9 +1,37 @@
 .contact {
   display: flex;
+
   &__item:not(:last-child) {
     margin-right: 75px;
   }
   &__link {
+    display: flex;
     color: var(--white-color);
+    font-size: 18px;
+
+    &-icon-phone {
+      width: 30px;
+      height: 30px;
+      fill: var(--white-color);
+      @include mq(tablet) {
+        width: 23px;
+        height: 23px;
+      }
+      @include mq(desktop) {
+        width: 20px;
+        height: 20px;
+
+        margin-right: 10px;
+      }
+    }
+
+    &-phone {
+      display: none;
+      @include mq(desktop) {
+        display: block;
+      }
+    }
+  }
+  @include mq(tablet) {
   }
 }

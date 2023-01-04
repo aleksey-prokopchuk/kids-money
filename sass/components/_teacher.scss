@@ -1,36 +1,100 @@
 .teacher {
-  background-image: url(../images/teacher/teacher-bg.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-
   &__container {
+    // outline: 1px solid tomato;
   }
   &__title {
+    color: var(--grey-color);
   }
   &__list {
-    padding: 100px 80px;
+    @include mq(mobile-only) {
+      height: 653px;
+      padding: 40px 38px;
+      border-radius: 38px;
+    }
+    @include mq(tablet-only) {
+      height: 739px;
+
+      padding: 60px 53px;
+    }
+    @include mq(desktop) {
+      padding: 80px 80px;
+    }
 
     border-radius: 40px;
 
-    background-image: url(../images/teacher/teacher.png);
     background-repeat: no-repeat;
-    background-position: 768px bottom;
+    background-position: center bottom;
 
     background-color: var(--grey-color);
     color: var(--accent-color);
+
+    // mobile
+    background-image: url(../images/teacher/teacher_sm.png);
+    background-image: -webkit-image-set(
+      url(../images/teacher/teacher_sm.webp) 1x
+    );
+
+    @include mq(retina) {
+      background-image: url(../images/teacher/teacher_sm@2x.jpg);
+      background-image: -webkit-image-set(
+        url(../images/teacher/teacher_sm@2x.webp) 2x
+      );
+    }
+
+    // tablet
+    @include mq(tablet) {
+      background-image: url(../images/teacher/teacher_md.png);
+      background-image: -webkit-image-set(
+        url(../images/teacher/teacher_md.webp) 1x
+      );
+
+      @include mq(retina) {
+        background-image: url(../images/teacher/teacher_md@2x.jpg);
+        background-image: -webkit-image-set(
+          url(../images/teacher/teacher_md@2x.webp) 2x
+        );
+      }
+    }
+
+    // desktop
+    @include mq(desktop) {
+      background-image: url(../images/teacher/teacher_lg.png);
+      background-image: -webkit-image-set(
+        url(../images/teacher/teacher_lg.webp) 1x
+      );
+
+      @include mq(retina) {
+        background-image: url(../images/teacher/teacher_lg@2x.jpg);
+        background-image: -webkit-image-set(
+          url(../images/teacher/teacher_lg@2x.webp) 2x
+        );
+      }
+
+      background-repeat: no-repeat;
+      background-position: 768px bottom;
+    }
   }
   &__item {
   }
   &__item:not(:last-child) {
+    @include mq(mobile-only) {
+      margin-bottom: 30px;
+    }
     margin-bottom: 45px;
   }
   &__description {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 25px;
     line-height: 1.16;
     letter-spacing: 0.03em;
 
+    text-align: left;
+
     color: var(--accent-color);
+
+    @include mq(mobile-only) {
+      font-size: 20px;
+      line-height: 1.15;
+    }
   }
 }

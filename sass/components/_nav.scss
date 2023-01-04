@@ -1,10 +1,25 @@
 .nav {
-  margin-right: 127px;
+  display: none;
+
+  @include mq(tablet) {
+    display: block;
+    margin-right: 77px;
+  }
+
+  margin-right: 48px;
+  @include mq(desktop) {
+    margin-right: 223px;
+  }
+
   &__list {
     display: flex;
   }
   &__item:not(:last-child) {
-    padding-right: 25px;
+    margin-right: 20px;
+
+    @include mq(desktop) {
+      margin-right: 24px;
+    }
   }
   &__link {
     color: var(--accent-color);

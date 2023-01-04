@@ -1,9 +1,24 @@
 .skills {
-  height: 1113px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  // outline: 1px solid tomato;
 
-  background-image: url(../images/skills/skills-bg.svg);
+  height: 1002px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include mq(tablet) {
+    height: 830px;
+
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  @include mq(desktop) {
+    height: 1113px;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  // background-image: url(../images/skills/skills-bg.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -12,6 +27,8 @@
     position: relative;
   }
   &__title {
+    color: var(--grey-color);
+
     // margin-bottom: 60px;
   }
   &__list {
@@ -21,8 +38,17 @@
     align-items: center;
     justify-content: center;
 
-    width: 270px;
-    height: 270px;
+    width: 180px;
+    height: 180px;
+
+    @include mq(tablet) {
+      width: 220px;
+      height: 220px;
+    }
+    @include mq(desktop) {
+      width: 270px;
+      height: 270px;
+    }
 
     padding-left: 50px;
     padding-right: 50px;
@@ -41,52 +67,139 @@
     }
   }
 
-  &__item:hover,
-  &__item:focus {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-  }
+  // &__item:hover,
+  // &__item:focus {
+  //   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  //     0px 2px 1px rgba(0, 0, 0, 0.2);
+  // }
 
+  // mobile
   &__item:nth-child(1) {
     position: absolute;
-    top: 163px;
-    left: 315px;
+    top: 78px;
+    left: 120px;
   }
   &__item:nth-child(2) {
     position: absolute;
-    top: 163px;
-    left: 615px;
+    top: 244px;
+    left: 15px;
   }
   &__item:nth-child(3) {
     position: absolute;
-    top: 403px;
-    left: 165px;
+    top: 244px;
+    left: 225px;
   }
   &__item:nth-child(4) {
     position: absolute;
-    top: 403px;
-    left: 465px;
+    top: 410px;
+    left: 120px;
   }
   &__item:nth-child(5) {
     position: absolute;
-    top: 403px;
-    left: 765px;
+    top: 576px;
+    left: 15px;
   }
   &__item:nth-child(6) {
     position: absolute;
-    top: 643px;
-    left: 315px;
+    top: 742px;
+    left: 120px;
   }
   &__item:nth-child(7) {
     position: absolute;
-    top: 643px;
-    left: 615px;
+    top: 576px;
+    left: 225px;
   }
+  // tablet
+  @include mq(tablet) {
+    &__item:nth-child(1) {
+      position: absolute;
+      top: 108px;
+      left: 153px;
+    }
+    &__item:nth-child(2) {
+      position: absolute;
+      top: 108px;
+      left: 393px;
+    }
+    &__item:nth-child(3) {
+      position: absolute;
+      top: 314px;
+      left: 32px;
+    }
+    &__item:nth-child(4) {
+      position: absolute;
+      top: 314px;
+      left: 273px;
+    }
+    &__item:nth-child(5) {
+      position: absolute;
+      top: 314px;
+      left: 514px;
+    }
+    &__item:nth-child(6) {
+      position: absolute;
+      top: 520px;
+      left: 153px;
+    }
+    &__item:nth-child(7) {
+      position: absolute;
+      top: 520px;
+      left: 393px;
+    }
+  }
+
+  // desktop
+  @include mq(desktop) {
+    &__item:nth-child(1) {
+      position: absolute;
+      top: 163px;
+      left: 315px;
+    }
+    &__item:nth-child(2) {
+      position: absolute;
+      top: 163px;
+      left: 615px;
+    }
+    &__item:nth-child(3) {
+      position: absolute;
+      top: 403px;
+      left: 165px;
+    }
+    &__item:nth-child(4) {
+      position: absolute;
+      top: 403px;
+      left: 465px;
+    }
+    &__item:nth-child(5) {
+      position: absolute;
+      top: 403px;
+      left: 765px;
+    }
+    &__item:nth-child(6) {
+      position: absolute;
+      top: 643px;
+      left: 315px;
+    }
+    &__item:nth-child(7) {
+      position: absolute;
+      top: 643px;
+      left: 615px;
+    }
+  }
+
   &__description {
     font-weight: 700;
-    font-size: 25px;
-    line-height: 29px;
-    text-align: center;
+    font-size: 16px;
+    line-height: 1.19;
+
+    @include mq(tablet) {
+      font-size: 20px;
+      line-height: 1.15;
+    }
+    @include mq(desktop) {
+      font-size: 25px;
+      line-height: 1.16;
+    }
 
     color: var(--grey-color);
     &-grey {

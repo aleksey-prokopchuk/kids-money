@@ -1,40 +1,159 @@
 .hero {
   // background-color: var(--grey-color);
 
-  //   background-image: linear-gradient(#00000052, #00000052),
-  //     url("../../images/hero/hero_bg.jpg");
-  background-image: url("../images/hero/hero_bg.jpg");
+  background-image: 
+  // linear-gradient(
+  //     rgba(47, 48, 58, 0.4),
+  //     rgba(47, 48, 58, 0.4)
+  //   ),
+    url(../images/hero/hero_sm.jpg);
+  background-image: 
+  // linear-gradient(
+  //     rgba(47, 48, 58, 0.4),
+  //     rgba(47, 48, 58, 0.4)
+  //   ),
+    -webkit-image-set(url(../images/hero/hero_sm.webp) 1x);
+
+  @include mq(retina) {
+    background-image: 
+    // linear-gradient(
+    //     rgba(47, 48, 58, 0.4),
+    //     rgba(47, 48, 58, 0.4)
+    //   ),
+      url(../images/hero/hero_sm@2x.jpg);
+    background-image: 
+    // linear-gradient(
+    //     rgba(47, 48, 58, 0.4),
+    //     rgba(47, 48, 58, 0.4)
+    //   ),
+      -webkit-image-set(url(../images/hero/hero_sm@2x.webp) 2x);
+  }
+
+  @include mq(tablet) {
+    background-image: 
+    // linear-gradient(
+    //     rgba(47, 48, 58, 0.4),
+    //     rgba(47, 48, 58, 0.4)
+    //   ),
+      url(../images/hero/hero_md.jpg);
+    background-image: 
+    // linear-gradient(
+    //     rgba(47, 48, 58, 0.4),
+    //     rgba(47, 48, 58, 0.4)
+    //   ),
+      -webkit-image-set(url(../images/hero/hero_md.webp) 1x);
+    @include mq(retina) {
+      background-image: 
+      // linear-gradient(
+      //     rgba(47, 48, 58, 0.4),
+      //     rgba(47, 48, 58, 0.4)
+      //   ),
+        url(../images/hero/hero_md@2x.jpg);
+      background-image: 
+      // linear-gradient(
+      //     rgba(47, 48, 58, 0.4),
+      //     rgba(47, 48, 58, 0.4)
+      //   ),
+        -webkit-image-set(url(../images/hero/hero_md@2x.webp) 2x);
+    }
+  }
+
+  @include mq(desktop) {
+    background-image: 
+    // linear-gradient(
+    //     rgba(47, 48, 58, 0.4),
+    //     rgba(47, 48, 58, 0.4)
+    //   ),
+      url(../images/hero/hero_lg.jpg);
+    background-image: 
+    // linear-gradient(
+    //     rgba(47, 48, 58, 0.4),
+    //     rgba(47, 48, 58, 0.4)
+    //   ),
+      -webkit-image-set(url(../images/hero/hero_lg.webp) 1x);
+    @include mq(retina) {
+      background-image: 
+      // linear-gradient(
+      //     rgba(47, 48, 58, 0.4),
+      //     rgba(47, 48, 58, 0.4)
+      //   ),
+        url(../images/hero/hero_lg@2x.jpg);
+      background-image: 
+      // linear-gradient(
+      //     rgba(47, 48, 58, 0.4),
+      //     rgba(47, 48, 58, 0.4)
+      //   ),
+        -webkit-image-set(url(../images/hero/hero_lg@2x.webp) 2x);
+    }
+  }
+
+  // background-image: url("../images/hero/hero_bg.jpg");
   background-repeat: no-repeat;
   background-position: top;
   &__container {
-    padding-top: 158px;
+    height: 485px;
+
+    padding-top: 76px;
+    @include mq(tablet) {
+      height: 515px;
+      padding-top: 91px;
+    }
+    @include mq(desktop) {
+      height: 891px;
+      padding-top: 158px;
+    }
   }
   &__title {
     font-weight: 700;
-    font-size: 50px;
-    line-height: 1.5;
+    font-size: 27px;
+    line-height: 1.37;
     text-align: center;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
+
+    @include mq(tablet) {
+      font-size: 37px;
+      line-height: 1.351;
+    }
+
+    @include mq(desktop) {
+      font-size: 50px;
+      line-height: 1.164;
+    }
   }
   &__wrapper {
-    padding: 150px 151px 130px 151px;
-    // padding-top: 120px;
-    // padding-bottom: 120px;
+    padding: 55px 34px 54px 34px;
 
     background: rgba(0, 0, 0, 0.3);
     box-shadow: 0px 9px 31px -8px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(25px);
 
-    /* Note: backdrop-filter has minimal browser support */
-    border-radius: 70px;
+    border-radius: 30px;
+
+    @include mq(tablet) {
+      padding: 58px 34px 58px 34px;
+
+      border-radius: 50px;
+    }
+    @include mq(desktop) {
+      padding: 160px 151px 159px 151px;
+
+      border-radius: 70px;
+    }
   }
   &__content {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 1.167;
     text-align: center;
-    letter-spacing: 0.05em;
+    // letter-spacing: 0.05em;
+
+    @include mq(tablet) {
+      font-size: 16px;
+    }
+    @include mq(desktop) {
+      font-size: 24px;
+    }
   }
   p:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
