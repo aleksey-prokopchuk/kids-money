@@ -24,9 +24,13 @@
     }
   }
   &__logo {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     margin-right: 24px;
+    @include mq(mobile) {
+      width: 100px;
+      height: 100px;
+    }
     @include mq(tablet) {
       width: 132px;
       height: 132px;
@@ -91,29 +95,37 @@
     }
   }
   &__link {
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.182;
+    font-weight: 600;
+
+    @include mq(mobile) {
+      font-size: 18px;
+      line-height: 1.167;
+    }
     @include mq(desktop) {
       display: flex;
       flex-direction: column-reverse;
-    }
-    align-items: center;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 1.182;
-
-    @include mq(mobile-only) {
-      font-size: 18px;
-      line-height: 1.167;
+      font-size: 22px;
+      line-height: 1.182;
     }
 
     color: var(--white-color);
 
     &-icon {
       position: absolute;
-      top: -7px;
-      right: 0;
+      top: -5px;
+      right: 15px;
 
-      width: 34px;
-      height: 34px;
+      width: 28px;
+      height: 28px;
+      @include mq(mobile) {
+        width: 34px;
+        height: 34px;
+        top: -7px;
+        right: 0;
+      }
       @include mq(tablet) {
         width: 42px;
         height: 42px;
@@ -129,9 +141,12 @@
   }
   &__copyright {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.143;
     text-align: center;
+    @include mq(mobile) {
+      font-size: 14px;
+    }
     @include mq(tablet) {
       font-size: 16px;
       line-height: 1.188;

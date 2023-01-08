@@ -1,6 +1,11 @@
 .locations {
-  padding-top: 40px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+
+  @include mq(mobile) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
   @include mq(tablet) {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -31,13 +36,17 @@
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 30px;
-    padding: 40px 39px;
+    margin-bottom: 20px;
+    padding: 30px 20px;
     border: 2px solid var(--grey-color);
     border-radius: 20px;
 
     color: var(--grey-color);
 
+    @include mq(mobile) {
+      margin-bottom: 30px;
+      padding: 40px 39px;
+    }
     @include mq(tablet) {
       margin-bottom: 40px;
       padding: 44px 52px;
@@ -54,8 +63,11 @@
     margin-bottom: 15px;
 
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.182;
+    @include mq(mobile) {
+      font-size: 20px;
+    }
     @include mq(tablet) {
       font-size: 25px;
       line-height: 1.16;
@@ -66,8 +78,12 @@
     // display: flex;
     // align-items: center;
     // justify-content: center;
-    width: 394px;
-    height: 504px;
+    width: 100%;
+    height: 400px;
+    @include mq(mobile) {
+      width: 394px;
+      height: 504px;
+    }
     @include mq(tablet) {
       width: 737px;
       height: 908px;

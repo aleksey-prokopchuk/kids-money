@@ -1,0 +1,65 @@
+.no-scroll {
+  overflow-y: hidden;
+}
+
+.mobile-menu {
+  &__container {
+    height: 100%;
+    display: flex;
+    //   display: none;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+
+  text-align-last: left;
+
+  background-color: var(--grey-color);
+
+  transform: translateX(100);
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &list {
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.186;
+
+    color: var(--white-color);
+  }
+  &__icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    fill: var(--accent-color);
+  }
+
+  &.is-active {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: initial;
+  }
+
+  &.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: initial;
+  }
+}
